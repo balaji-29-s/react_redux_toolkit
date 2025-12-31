@@ -1,6 +1,6 @@
-import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
-import { sub } from 'date-fns';
+import { createAsyncThunk, createSlice, nanoid } from "@reduxjs/toolkit";
 import axios from "axios";
+import { sub } from 'date-fns';
 
 const POSTS_URL = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -100,10 +100,10 @@ const postsSlice = createSlice({
                 action.payload.date = new Date().toISOString();
                 action.payload.reactions = {
                     thumbsUp: 0,
-                    hooray: 0,
+                    wow: 0,
                     heart: 0,
                     rocket: 0,
-                    eyes: 0
+                    coffee: 0
                 }
                 console.log(action.payload)
                 state.posts.push(action.payload)

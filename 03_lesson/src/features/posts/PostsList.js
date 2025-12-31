@@ -1,7 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
-import { selectAllPosts, getPostsStatus, getPostsError, fetchPosts } from "./postsSlice";
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import PostsExcerpt from "./PostsExcerpt";
+import { fetchPosts, getPostsError, getPostsStatus, selectAllPosts } from "./postsSlice";
 
 const PostsList = () => {
     const dispatch = useDispatch();
